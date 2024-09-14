@@ -4,7 +4,7 @@
 rm -rf .repo/local_manifests
 
 # Initialize repo with specified manifest
-repo init --depth=1 -u https://github.com/ProjectBlaze/manifest -b 15
+repo init --depth=1 -u https://github.com/c0smic-Lab/manifest.git -b 15 --git-lfs --depth=1
 
 # Clone local_manifests repository
 git clone https://github.com/sksayz5/local_manifest.git --depth 1 -b main .repo/local_manifests
@@ -20,6 +20,6 @@ export BUILD_HOSTNAME=crave
 
 # Set up build environment
 source build/envsetup.sh
-lunch blaze_RMX1901-ap3a-user
+lunch aosp_RMX1901-ap3a-user
 make install clean
-make bacon
+mka bacon
